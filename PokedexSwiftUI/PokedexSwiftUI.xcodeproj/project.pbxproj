@@ -11,6 +11,13 @@
 		A0C1414D2C6C32B000A8F117 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C1414C2C6C32B000A8F117 /* ContentView.swift */; };
 		A0C1414F2C6C32B200A8F117 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C1414E2C6C32B200A8F117 /* Assets.xcassets */; };
 		A0C141522C6C32B200A8F117 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C141512C6C32B200A8F117 /* Preview Assets.xcassets */; };
+		A0C1415D2C6C33F800A8F117 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C1415C2C6C33F800A8F117 /* OnboardingView.swift */; };
+		A0C141652C6C3A3A00A8F117 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0C141602C6C3A3900A8F117 /* Poppins-Light.ttf */; };
+		A0C141662C6C3A3A00A8F117 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0C141612C6C3A3900A8F117 /* Poppins-Bold.ttf */; };
+		A0C141672C6C3A3A00A8F117 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0C141622C6C3A3900A8F117 /* Poppins-SemiBold.ttf */; };
+		A0C141682C6C3A3A00A8F117 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0C141632C6C3A3900A8F117 /* Poppins-Regular.ttf */; };
+		A0C141692C6C3A3A00A8F117 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0C141642C6C3A3900A8F117 /* Poppins-Medium.ttf */; };
+		A0C1416C2C6C3CD400A8F117 /* MyColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C1416B2C6C3CD400A8F117 /* MyColors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,14 @@
 		A0C1414C2C6C32B000A8F117 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A0C1414E2C6C32B200A8F117 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0C141512C6C32B200A8F117 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A0C1415C2C6C33F800A8F117 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A0C141602C6C3A3900A8F117 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "../../../../../../project assets/Poppins/Poppins-Light.ttf"; sourceTree = "<group>"; };
+		A0C141612C6C3A3900A8F117 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../../../../../project assets/Poppins/Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		A0C141622C6C3A3900A8F117 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBold.ttf"; path = "../../../../../../project assets/Poppins/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		A0C141632C6C3A3900A8F117 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../../../../../project assets/Poppins/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		A0C141642C6C3A3900A8F117 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Medium.ttf"; path = "../../../../../../project assets/Poppins/Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		A0C1416A2C6C3A5C00A8F117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A0C1416B2C6C3CD400A8F117 /* MyColors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MyColors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +66,11 @@
 		A0C141492C6C32B000A8F117 /* PokedexSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				A0C1416A2C6C3A5C00A8F117 /* Info.plist */,
+				A0C1415E2C6C397100A8F117 /* Utils */,
+				A0C141582C6C33BA00A8F117 /* Onboarding */,
 				A0C1414A2C6C32B000A8F117 /* PokedexSwiftUIApp.swift */,
 				A0C1414C2C6C32B000A8F117 /* ContentView.swift */,
-				A0C1414E2C6C32B200A8F117 /* Assets.xcassets */,
 				A0C141502C6C32B200A8F117 /* Preview Content */,
 			);
 			path = PokedexSwiftUI;
@@ -65,6 +82,60 @@
 				A0C141512C6C32B200A8F117 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A0C141582C6C33BA00A8F117 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				A0C1415B2C6C33D700A8F117 /* ViewModel */,
+				A0C1415A2C6C33D200A8F117 /* View */,
+				A0C141592C6C33CA00A8F117 /* Model */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		A0C141592C6C33CA00A8F117 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A0C1415A2C6C33D200A8F117 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A0C1415C2C6C33F800A8F117 /* OnboardingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A0C1415B2C6C33D700A8F117 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A0C1415E2C6C397100A8F117 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A0C1415F2C6C397C00A8F117 /* Fonts */,
+				A0C1414E2C6C32B200A8F117 /* Assets.xcassets */,
+				A0C1416B2C6C3CD400A8F117 /* MyColors.xcassets */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A0C1415F2C6C397C00A8F117 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A0C141612C6C3A3900A8F117 /* Poppins-Bold.ttf */,
+				A0C141602C6C3A3900A8F117 /* Poppins-Light.ttf */,
+				A0C141642C6C3A3900A8F117 /* Poppins-Medium.ttf */,
+				A0C141632C6C3A3900A8F117 /* Poppins-Regular.ttf */,
+				A0C141622C6C3A3900A8F117 /* Poppins-SemiBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +196,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C141672C6C3A3A00A8F117 /* Poppins-SemiBold.ttf in Resources */,
+				A0C141692C6C3A3A00A8F117 /* Poppins-Medium.ttf in Resources */,
 				A0C141522C6C32B200A8F117 /* Preview Assets.xcassets in Resources */,
+				A0C141652C6C3A3A00A8F117 /* Poppins-Light.ttf in Resources */,
+				A0C141682C6C3A3A00A8F117 /* Poppins-Regular.ttf in Resources */,
+				A0C1416C2C6C3CD400A8F117 /* MyColors.xcassets in Resources */,
 				A0C1414F2C6C32B200A8F117 /* Assets.xcassets in Resources */,
+				A0C141662C6C3A3A00A8F117 /* Poppins-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C1415D2C6C33F800A8F117 /* OnboardingView.swift in Sources */,
 				A0C1414D2C6C32B000A8F117 /* ContentView.swift in Sources */,
 				A0C1414B2C6C32B000A8F117 /* PokedexSwiftUIApp.swift in Sources */,
 			);
@@ -275,6 +353,7 @@
 				DEVELOPMENT_TEAM = 8FVAA57BW9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokedexSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +383,7 @@
 				DEVELOPMENT_TEAM = 8FVAA57BW9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokedexSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
