@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct PokedexSwiftUIApp: App {
+struct PokedexSwiftUI: App {
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            OnboardingView(viewModel: OnboardingViewModel())
         }
     }
 }
