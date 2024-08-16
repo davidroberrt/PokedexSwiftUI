@@ -68,20 +68,33 @@ struct OnboardingView: View {
                 .foregroundStyle(Color("Secondary"))
         }
     }
+    @ViewBuilder
     var onboardingProgressView: some View {
-        HStack{
-            Rectangle()
-                .frame(width: 28, height: 9)
-                .clipShape(.capsule)
-                .foregroundStyle(Color("DarkBlue"))
-            Circle()
-                .frame(width: 9, height: 9)
-                .foregroundStyle(Color(.lightGray))
+        if viewModel.currentStep == 0{
+            HStack{
+                Rectangle()
+                    .frame(width: 28, height: 9)
+                    .clipShape(.capsule)
+                    .foregroundStyle(Color("DarkBlue"))
+                Circle()
+                    .frame(width: 9, height: 9)
+                    .foregroundStyle(Color(.lightGray))
+            }
+        }else{
+            HStack{
+                Circle()
+                    .frame(width: 9, height: 9)
+                    .foregroundStyle(Color(.lightGray))
+                Rectangle()
+                    .frame(width: 28, height: 9)
+                    .clipShape(.capsule)
+                    .foregroundStyle(Color("DarkBlue"))
+            }
         }
     }
     func continueButton(buttonText: String) -> some View {
         Button(action: {
-            
+            viewModel.currentStep = 1
         }, label: {
             Rectangle()
                 .frame( height: 58)
