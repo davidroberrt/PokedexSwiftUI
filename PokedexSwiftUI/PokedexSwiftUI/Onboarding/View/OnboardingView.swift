@@ -15,16 +15,16 @@ struct OnboardingView: View {
                 SplashView()
             } else {
                 TabView(selection: $viewModel.currentStep) {
-                    ForEach(0..<viewModel.onboardingSteps.count, id: \.self) {
-                        Index in
+                    ForEach(Array(viewModel.onboardingSteps.enumerated()), id: \.offset) {
+                        index, step in
                         VStack {
-                            trainersImages(stepIndex: Index)
+                            trainersImages(stepIndex: index)
                             Spacer().frame(height: 45)
-                            titleAndDescriptions(title: viewModel.onboardingSteps[Index].title, description: viewModel.onboardingSteps[Index].description)
+                            titleAndDescriptions(title: step.title, description: step.description)
                             Spacer().frame(height: 24)
                             onboardingProgressView
                             Spacer().frame(height: 24)
-                            continueButton(buttonText: viewModel.onboardingSteps[Index].buttonText)
+                            continueButton(buttonText: step.buttonText)
                         }
                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,
                                maxHeight: .infinity,
