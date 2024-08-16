@@ -18,7 +18,7 @@ struct OnboardingView: View {
                     ForEach(0..<viewModel.onboardingSteps.count, id: \.self) {
                         Index in
                         VStack {
-                            trainersImages
+                            trainersImages(stepIndex: Index)
                             Spacer().frame(height: 45)
                             titleAndDescriptions(title: viewModel.onboardingSteps[Index].title, description: viewModel.onboardingSteps[Index].description)
                             Spacer().frame(height: 24)
@@ -41,8 +41,8 @@ struct OnboardingView: View {
         }
     }
     @ViewBuilder
-    var trainersImages: some View{
-        if viewModel.currentStep == 0 {
+    func trainersImages(stepIndex: Int) -> some View {
+        if stepIndex == 0 {
             ZStack{
                 Image("trainer1")
                     .offset(x: -50)
