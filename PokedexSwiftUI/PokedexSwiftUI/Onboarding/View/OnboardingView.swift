@@ -10,24 +10,35 @@ import SwiftUI
 struct OnboardingView: View {
     @ObservedObject var viewModel : OnboardingViewModel
     var body: some View {
-        TabView(selection: $viewModel.currentStep) {
-            ForEach(0..<viewModel.onboardingSteps.count, id: \.self) {
-                Index in
-                VStack {
-                    trainersImages
-                    Spacer().frame(height: 45)
-                    titleAndDescriptions(title: viewModel.onboardingSteps[Index].title, description: viewModel.onboardingSteps[Index].description)
-                    Spacer().frame(height: 24)
-                    onboardingProgressView
-                    Spacer().frame(height: 24)
-                    continueButton(buttonText: viewModel.onboardingSteps[Index].buttonText)
-                }
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,
-                       maxHeight: .infinity,
-                       alignment: .bottom)
-                .padding()
+        ZStack {
+            if viewModel.showSplash {
+                SplashView()
+            } else {
+                TabView(selection: $viewModel.currentStep) {
+                    ForEach(0..<viewModel.onboardingSteps.count, id: \.self) {
+                        Index in
+                        VStack {
+                            trainersImages
+                            Spacer().frame(height: 45)
+                            titleAndDescriptions(title: viewModel.onboardingSteps[Index].title, description: viewModel.onboardingSteps[Index].description)
+                            Spacer().frame(height: 24)
+                            onboardingProgressView
+                            Spacer().frame(height: 24)
+                            continueButton(buttonText: viewModel.onboardingSteps[Index].buttonText)
+                        }
+                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,
+                               maxHeight: .infinity,
+                               alignment: .bottom)
+                        .padding()
+                    }
+                }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             }
-        }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+        }
+        .onAppear{
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                viewModel.showSplash = false
+            }
+        }
     }
     @ViewBuilder
     var trainersImages: some View{
